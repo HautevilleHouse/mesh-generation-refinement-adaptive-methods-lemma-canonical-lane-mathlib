@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean.ElementMetrics
+import MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean.RefinementCriterion
+import MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean.AdaptiveSolverConvergence
+import MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean.MeshQualityOptimization
+
+namespace HautevilleHouse
+namespace MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean
+
+def ConstrainedMeshGenerationRefinementClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_mesh_generation_refinement_endgame (A : AdmissibleClass) : ConstrainedMeshGenerationRefinementClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end MeshGenerationRefinementAdaptiveMethodsLemmaCanonicalLaneLean
+end HautevilleHouse

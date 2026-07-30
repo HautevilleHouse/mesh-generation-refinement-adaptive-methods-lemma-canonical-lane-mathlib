@@ -1,0 +1,9 @@
+import mesh_generation_refinement_adaptive_methods_lemma_canonical_lane_mathlib.GateLemmas
+namespace HautevilleHouse
+namespace mesh_generation_refinement_adaptive_methods_lemma_canonical_lane_mathlib
+structure ConstrainedTheoremClosure where
+  admissible :: intro :: constraint :: consequence :: proof ::
+theorem canonical : ConstrainedTheoremClosure :=
+  ConstrainedTheoremClosure.intro
+end mesh_generation_refinement_adaptive_methods_lemma_canonical_lane_mathlib
+end HautevilleHouse
